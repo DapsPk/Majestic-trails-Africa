@@ -37,7 +37,6 @@ export interface BookingConfirmationData {
   updatedAt?: string;
 }
 
-// ✅ ADD THIS - Good to have for API responses
 export interface BookingResponse {
   success: boolean;
   data?: BookingConfirmationData;
