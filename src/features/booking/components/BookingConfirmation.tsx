@@ -1,4 +1,3 @@
-
 'use client';
 
 import { BookingConfirmationData } from '../types/booking.types';
@@ -11,10 +10,12 @@ interface BookingConfirmationProps {
 }
 
 export default function BookingConfirmation({ booking, onComplete }: BookingConfirmationProps) {
-  const isSerengetiPackage = booking.tour.title.toLowerCase().includes('serengeti');
+  // FIXED: Added safe access with optional chaining
+  const isSerengetiPackage = booking.tour?.title?.toLowerCase().includes('serengeti') || false;
 
   // Format date for display
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: string | undefined) => {
+    if (!dateString) return 'Not specified';
     return new Date(dateString).toLocaleDateString('en-US', {
       weekday: 'long',
       year: 'numeric',
@@ -41,7 +42,7 @@ export default function BookingConfirmation({ booking, onComplete }: BookingConf
       ];
     }
 
-    if (booking.tour.section === 'kilimanjaro') {
+    if (booking.tour?.section === 'kilimanjaro') {
       return [
         '🏔️ Climbing preparation guide sent',
         '⚡ Physical training recommendations',
@@ -85,19 +86,19 @@ export default function BookingConfirmation({ booking, onComplete }: BookingConf
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
           <div>
             <span className="text-gray-600">Booking Reference:</span>
-            <p className="font-mono font-semibold text-gray-800">{booking.bookingReference}</p>
+            <p className="font-mono font-semibold text-gray-800">{booking.bookingReference || booking.bookingId || booking.id}</p>
           </div>
           <div>
             <span className="text-gray-600">Booking ID:</span>
-            <p className="font-mono text-gray-800">{booking.bookingId}</p>
+            <p className="font-mono text-gray-800">{booking.bookingId || booking.id}</p>
           </div>
           <div>
             <span className="text-gray-600">Tour:</span>
-            <p className="font-semibold text-gray-800">{booking.tour.title}</p>
+            <p className="font-semibold text-gray-800">{booking.tour?.title || booking.tourName}</p>
           </div>
           <div>
             <span className="text-gray-600">Duration:</span>
-            <p className="text-gray-800">{booking.tour.duration}</p>
+            <p className="text-gray-800">{booking.tour?.duration || 'N/A'}</p>
           </div>
           {booking.departureDate && (
             <div>
@@ -107,16 +108,16 @@ export default function BookingConfirmation({ booking, onComplete }: BookingConf
           )}
           <div>
             <span className="text-gray-600">Participants:</span>
-            <p className="text-gray-800">{booking.formData.participants} people</p>
+            <p className="text-gray-800">{booking.formData?.participants || booking.numberOfGuests} people</p>
           </div>
           <div>
             <span className="text-gray-600">Total Amount:</span>
-            <p className="text-xl font-bold text-green-600">{formatPrice(booking.totalAmount)}</p>
+            <p className="text-xl font-bold text-green-600">{formatPrice(booking.totalAmount || booking.totalPrice || 0)}</p>
           </div>
           <div>
             <span className="text-gray-600">Status:</span>
             <p className="inline-flex items-center px-2 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">
-              ✓ {booking.status.charAt(0).toUpperCase() + booking.status.slice(1)}
+              ✓ {booking.status ? booking.status.charAt(0).toUpperCase() + booking.status.slice(1) : 'Confirmed'}
             </p>
           </div>
         </div>
@@ -127,19 +128,19 @@ export default function BookingConfirmation({ booking, onComplete }: BookingConf
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
             <div>
               <span className="text-gray-600">Name:</span>
-              <p className="text-gray-800">{booking.formData.customerInfo.name}</p>
+              <p className="text-gray-800">{booking.formData?.customerInfo?.name || booking.customerName}</p>
             </div>
             <div>
               <span className="text-gray-600">Email:</span>
-              <p className="text-gray-800">{booking.formData.customerInfo.email}</p>
+              <p className="text-gray-800">{booking.formData?.customerInfo?.email || booking.customerEmail}</p>
             </div>
             <div>
               <span className="text-gray-600">Phone:</span>
-              <p className="text-gray-800">{booking.formData.customerInfo.phone}</p>
+              <p className="text-gray-800">{booking.formData?.customerInfo?.phone || booking.customerPhone}</p>
             </div>
             <div>
               <span className="text-gray-600">Country:</span>
-              <p className="text-gray-800">{booking.formData.customerInfo.country}</p>
+              <p className="text-gray-800">{booking.formData?.customerInfo?.country || 'Not specified'}</p>
             </div>
           </div>
         </div>
@@ -235,14 +236,14 @@ export default function BookingConfirmation({ booking, onComplete }: BookingConf
         </Button>
       </div>
 
-      {/* Additional Information */}
+      {/* Additional Information - FIXED: Safe date handling */}
       <div className="text-center text-sm text-gray-500">
         <p>
-          A detailed confirmation email has been sent to {booking.formData.customerInfo.email}
+          A detailed confirmation email has been sent to {booking.formData?.customerInfo?.email || booking.customerEmail}
         </p>
         <p className="mt-1">
-          Booking confirmed on {booking.createdAt.toLocaleDateString()} at{' '}
-          {booking.createdAt.toLocaleTimeString()}
+          Booking confirmed on {new Date(booking.createdAt).toLocaleDateString()} at{' '}
+          {new Date(booking.createdAt).toLocaleTimeString()}
         </p>
       </div>
 

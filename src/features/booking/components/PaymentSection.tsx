@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -12,8 +11,8 @@ interface PaymentSectionProps {
   onBack: () => void;
   isProcessing: boolean;
   totalAmount: number;
-  tour: Tour;
-  participantCount: number;
+  tour?: Tour;              // ← FIXED: Made optional
+  participantCount?: number; // ← FIXED: Made optional
 }
 
 export default function PaymentSection({ 
@@ -22,7 +21,7 @@ export default function PaymentSection({
   isProcessing, 
   totalAmount,
   tour,
-  participantCount 
+  participantCount = 1      // ← FIXED: Default value if not provided
 }: PaymentSectionProps) {
   const [paymentMethod, setPaymentMethod] = useState<'credit_card' | 'bank_transfer'>('credit_card');
   const [cardDetails, setCardDetails] = useState({
@@ -33,7 +32,10 @@ export default function PaymentSection({
   });
   const [agreeToTerms, setAgreeToTerms] = useState(false);
 
-  const isSerengetiPackage = tour.title.toLowerCase().includes('serengeti');
+  // FIXED: Safe access to tour properties with fallbacks
+  const isSerengetiPackage = tour?.title?.toLowerCase().includes('serengeti') || false;
+  const tourTitle = tour?.title || 'Your Tour';
+  const tourDuration = tour?.duration || 'N/A';
 
   const handleCardDetailChange = (field: string, value: string) => {
     setCardDetails(prev => ({
@@ -79,15 +81,15 @@ export default function PaymentSection({
         <div className="grid grid-cols-2 gap-4 text-sm">
           <div>
             <span className="text-gray-600">Tour:</span>
-            <p className="font-medium truncate">{tour.title}</p>
+            <p className="font-medium truncate">{tourTitle}</p>
           </div>
           <div>
             <span className="text-gray-600">Participants:</span>
-            <p className="font-medium">{participantCount} people</p>
+            <p className="font-medium">{participantCount} {participantCount === 1 ? 'person' : 'people'}</p>
           </div>
           <div>
             <span className="text-gray-600">Duration:</span>
-            <p className="font-medium">{tour.duration}</p>
+            <p className="font-medium">{tourDuration}</p>
           </div>
           <div>
             <span className="text-gray-600">Total:</span>

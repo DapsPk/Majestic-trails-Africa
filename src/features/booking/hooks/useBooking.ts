@@ -1,22 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import { BookingFormData } from '../types/booking.types';
+import { BookingFormData, BookingConfirmationData } from '../types/booking.types';
 import { Tour } from '@/features/tours/types/tour.types';
-
-interface BookingConfirmation {
-  bookingId: string;
-  tour: Tour;
-  formData: BookingFormData;
-  totalAmount: number;
-  status: 'confirmed' | 'pending' | 'cancelled';
-  createdAt: Date;
-}
 
 export function useBooking() {
   const [bookingData, setBookingData] = useState<BookingFormData | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
-  const [bookingConfirmation, setBookingConfirmation] = useState<BookingConfirmation | null>(null);
+  // FIXED: Changed type from custom BookingConfirmation to imported BookingConfirmationData
+  const [bookingConfirmation, setBookingConfirmation] = useState<BookingConfirmationData | null>(null);
 
   const generateBookingId = (): string => {
     return `MT${Date.now()}${Math.random().toString(36).substr(2, 5).toUpperCase()}`;
@@ -29,12 +21,56 @@ export function useBooking() {
     try {
       await new Promise(resolve => setTimeout(resolve, 3000));
       
-      const confirmation: BookingConfirmation = {
-        bookingId: generateBookingId(),
-        tour,
-        formData,
+      const bookingId = generateBookingId();
+      
+      // FIXED: Create confirmation that matches BookingConfirmationData interface
+      const confirmation: BookingConfirmationData = {
+        id: bookingId,
+        bookingId: bookingId,
+        bookingReference: bookingId,
+        tourId: tour.id,
+        tourName: tour.title,
+        // FIXED: Added full tour object with all needed properties
+        tour: {
+          id: tour.id,
+          title: tour.title,
+          duration: tour.duration,
+          price: tour.price,
+          image: tour.images?.main || tour.image || '/images/placeholder.jpg',
+          section: tour.section,
+          category: tour.category
+        },
+        // FIXED: Added customer fields at root level
+        customerName: formData.customerInfo.name,
+        customerEmail: formData.customerInfo.email,
+        customerPhone: formData.customerInfo.phone,
+        // FIXED: Added formData object with customerInfo
+        formData: {
+          participants: formData.participants,
+          customerInfo: {
+            name: formData.customerInfo.name,
+            email: formData.customerInfo.email,
+            phone: formData.customerInfo.phone,
+            country: formData.customerInfo.country,
+            specialRequirements: formData.customerInfo.specialRequirements
+          }
+        },
+        // FIXED: Added all date fields
+        bookingDate: new Date().toISOString(),
+        travelDate: formData.date,
+        // FIXED: Added departureDate if needed (optional)
+        departureDate: formData.date, // Using same date as travelDate
+        // FIXED: Added guest count fields
+        numberOfGuests: formData.participants,
+        // FIXED: Added price fields (support both totalAmount and totalPrice)
         totalAmount: calculateTotal(tour, formData.participants),
+        totalPrice: calculateTotal(tour, formData.participants),
+        // FIXED: Added status fields
         status: 'confirmed',
+        paymentStatus: 'paid',
+        // FIXED: Added special requests
+        specialRequests: formData.customerInfo.specialRequirements,
+        // FIXED: Added timestamps
         createdAt: new Date()
       };
 

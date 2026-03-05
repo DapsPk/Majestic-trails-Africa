@@ -10,6 +10,9 @@ interface BookingFormProps {
   tour: Tour | null;
   onSubmit: (data: BookingFormData) => void;
   onCancel: () => void;
+  // ADDED FIX: Added missing props that BookingModal is passing
+  isProcessing?: boolean;
+  calculateTotal?: (tour: Tour | null, participants: number) => number;
 }
 
 // Extended interface for Serengeti-specific options

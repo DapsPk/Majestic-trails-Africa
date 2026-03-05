@@ -33,10 +33,20 @@ export function useTourFilters() {
     updateFilters({ category: newCategories });
   };
 
-    return {
-      filters,
-      handleDifficultyChange,
-      handlePriceChange,
-      handleCategoryChange
-    };
-  }
+  // ADDED: Clear all filters function (keeps original code intact)
+  const clearFilters = () => {
+    updateFilters({
+      difficulty: [],
+      priceRange: [0, 10000],
+      category: []
+    });
+  };
+
+  return {
+    filters,
+    handleDifficultyChange,
+    handlePriceChange,
+    handleCategoryChange,
+    clearFilters // ADDED: Now this exists for TourFilters.tsx to use
+  };
+}
