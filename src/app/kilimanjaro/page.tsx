@@ -48,67 +48,55 @@ export default function KilimanjaroPage() {
   // Filter tours for kilimanjaro section only
   const kilimanjaroTours = toursData.filter(tour => tour.section === 'kilimanjaro');
 
-  // NEW: Filter tours by selected category
+  // Filter tours by selected category
   const filteredTours = selectedCategory 
     ? kilimanjaroTours.filter(tour => tour.kilimanjaroCategory === selectedCategory)
     : [];
 
-  // NEW KILIMANJARO CATEGORIES - Experience-based organization
+  // Kilimanjaro categories with image paths
   const kilimanjaroCategories = [
     { 
       id: 'multi-day-climbs', 
       name: 'Multi-Day Climbs', 
       count: kilimanjaroTours.filter(t => t.kilimanjaroCategory === 'multi-day-climbs').length,
-      emoji: '🏔️',
       description: '6-9 day expeditions with optimal acclimatization',
       difficulty: 'Difficult',
       duration: '6-9 days',
       successRate: 92,
-      color: 'from-blue-600 to-indigo-700',
-      bgColor: 'bg-gradient-to-r from-blue-600 to-indigo-700',
-      textColor: 'text-white',
+      image: '/images/kilimanjaro/categories/multi-day-climbs/main.jpg',
       features: ['Highest Success Rates', 'Gradual Acclimatization', 'Professional Guides', 'All Inclusive']
     },
     { 
       id: 'short-climbs', 
       name: 'Short Climbs', 
       count: kilimanjaroTours.filter(t => t.kilimanjaroCategory === 'short-climbs').length,
-      emoji: '⚡',
       description: '5-7 day faster summit attempts',
       difficulty: 'Moderate-Difficult',
       duration: '5-7 days',
       successRate: 78,
-      color: 'from-orange-500 to-red-600',
-      bgColor: 'bg-gradient-to-r from-orange-500 to-red-600',
-      textColor: 'text-white',
+      image: '/images/kilimanjaro/categories/short-climbs/main.jpg',
       features: ['Faster Summit', 'Budget Friendly', 'Great for Experienced', 'Efficient Itinerary']
     },
     { 
       id: 'day-trips', 
       name: 'Day Trips', 
       count: kilimanjaroTours.filter(t => t.kilimanjaroCategory === 'day-trips').length,
-      emoji: '🚶‍♂️',
       description: '1-2 day acclimatization and cultural experiences',
       difficulty: 'Easy-Moderate',
       duration: '1-2 days',
       successRate: null,
-      color: 'from-green-500 to-emerald-600',
-      bgColor: 'bg-gradient-to-r from-green-500 to-emerald-600',
-      textColor: 'text-white',
+      image: '/images/kilimanjaro/categories/day-trips/main.png',
       features: ['Cultural Immersion', 'Fitness Testing', 'Perfect Warm-up', 'Local Experiences']
     },
     { 
       id: 'luxury-climbs', 
       name: 'Luxury Climbs', 
-      count: 0, // Will be added in future phases
-      emoji: '⭐',
+      count: 0,
       description: 'Premium experiences with enhanced comfort',
       difficulty: 'Various',
       duration: '7-9 days',
       successRate: 95,
-      color: 'from-purple-500 to-pink-600',
-      bgColor: 'bg-gradient-to-r from-purple-500 to-pink-600',
-      textColor: 'text-white',
+      image: '/images/kilimanjaro/categories/luxury-climbs/main.jpg',
       features: ['Premium Accommodation', 'Private Guides', 'Enhanced Comfort', 'VIP Treatment']
     },
   ];
@@ -117,7 +105,7 @@ export default function KilimanjaroPage() {
     { number: '95%', label: 'Success Rate' },
     { number: '5,895m', label: 'Summit Height' },
     { number: '15,000+', label: 'Happy Climbers' },
-    { number: '⭐ 4.9', label: 'Climber Rating' },
+    { number: '4.9', label: 'Climber Rating' }, // ⭐ removed
   ];
 
   const includedFeatures = [
@@ -129,10 +117,9 @@ export default function KilimanjaroPage() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-      {/* Kilimanjaro Hero Section - CLEAN IMAGES WITHOUT GLOWING ELEMENTS */}
+      {/* Kilimanjaro Hero Section */}
       <section className="relative py-20 text-white overflow-hidden">
         <div className="absolute inset-0">
-          {/* Rotating Background Images - Same pattern as homepage */}
           {kilimanjaroImages.map((image, index) => (
             <div
               key={image}
@@ -147,11 +134,7 @@ export default function KilimanjaroPage() {
               }}
             />
           ))}
-          
-          {/* Dark Overlay for Text Readability */}
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          
-          {/* REMOVED: Both glowing elements for clean images */}
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -165,7 +148,6 @@ export default function KilimanjaroPage() {
               Experience the adventure of a lifetime with our expert-guided expeditions.
             </p>
 
-            {/* Climbing Stats */}
             <div className="flex flex-wrap justify-center gap-8 text-blue-200 mb-12">
               {climbingStats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -176,22 +158,21 @@ export default function KilimanjaroPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              {/* TRANSPARENT BUTTONS - Using primary variant */}
               <Button 
                 size="lg" 
-                variant="primary" // This is already transparent with white border
+                variant="primary"
                 onClick={() => document.getElementById('experience-section')?.scrollIntoView({ behavior: 'smooth' })}
                 className="px-8 py-4 text-lg font-semibold rounded-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm"
               >
-                🥾 Choose Your Experience
+                Choose Your Experience
               </Button>
               <Button 
                 size="lg" 
-                variant="primary" // This is already transparent with white border
+                variant="primary"
                 onClick={() => document.getElementById('success-calculator')?.scrollIntoView({ behavior: 'smooth' })}
                 className="px-8 py-4 text-lg font-semibold rounded-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm"
               >
-                📊 Check Success Chance
+                Check Success Chance
               </Button>
             </div>
           </div>
@@ -210,7 +191,7 @@ export default function KilimanjaroPage() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              {/* History Content */}
+              {/* History Content - Keep as is */}
               <div className="space-y-8">
                 <div className="animate-fade-in">
                   <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4 flex items-center">
@@ -239,7 +220,7 @@ export default function KilimanjaroPage() {
                 </div>
               </div>
 
-              {/* Additional History Content */}
+              {/* Additional History Content - Keep as is */}
               <div className="space-y-8">
                 <div className="animate-fade-in" style={{ animationDelay: '400ms' }}>
                   <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4 flex items-center">
@@ -267,7 +248,6 @@ export default function KilimanjaroPage() {
                   </p>
                 </div>
 
-                {/* Inspirational Quote */}
                 <div className="bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-6 rounded-2xl border-l-4 border-orange-500 animate-fade-in" style={{ animationDelay: '800ms' }}>
                   <p className="text-lg italic text-gray-700 dark:text-gray-300 text-center">
                     "Climb Kilimanjaro not just to reach the summit, but to discover the summit within yourself."
@@ -280,7 +260,7 @@ export default function KilimanjaroPage() {
         </div>
       </section>
 
-      {/* NEW: Kilimanjaro Route Map Section */}
+      {/* Kilimanjaro Route Map Section */}
       <section className="py-16 bg-white dark:bg-gray-800 transition-colors duration-300">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -295,7 +275,6 @@ export default function KilimanjaroPage() {
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-6"></div>
             </div>
             
-            {/* Map Container */}
             <div className="bg-white dark:bg-gray-700 rounded-2xl shadow-xl p-6 border border-gray-200 dark:border-gray-600">
               <Image 
                 src="/images/kilimanjaro/route-map.jpg" 
@@ -306,8 +285,6 @@ export default function KilimanjaroPage() {
                 priority
               />
               
-              
-              {/* Map Caption */}
               <div className="text-center mt-4">
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
                   Detailed overview of all Kilimanjaro climbing routes and camps
@@ -315,7 +292,6 @@ export default function KilimanjaroPage() {
               </div>
             </div>
 
-            {/* Route Highlights */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
               <div className="text-center p-6 bg-blue-50 dark:bg-blue-900/20 rounded-2xl">
                 <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">5,895m</div>
@@ -331,7 +307,6 @@ export default function KilimanjaroPage() {
               </div>
             </div>
 
-            {/* Popular Routes Info */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-2xl">
                 <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4 flex items-center">
@@ -363,7 +338,7 @@ export default function KilimanjaroPage() {
         </div>
       </section>
 
-      {/* NEW: Kilimanjaro Experience Categories Section - MOVED BELOW HISTORY */}
+      {/* Kilimanjaro Experience Categories Section */}
       <section id="experience-section" className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -377,21 +352,32 @@ export default function KilimanjaroPage() {
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-8"></div>
             </div>
 
-            {/* Kilimanjaro Category Cards */}
+            {/* Kilimanjaro Category Cards with Images */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-              {kilimanjaroCategories.map((category, index) => (
+              {kilimanjaroCategories.map((category) => (
                 <div
                   key={category.id}
-                  className={`group relative overflow-hidden rounded-3xl p-8 text-white transform transition-all duration-500 hover:scale-105 hover:shadow-2xl ${category.bgColor} cursor-pointer`}
+                  className="group relative overflow-hidden rounded-3xl cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl"
                   onClick={() => setSelectedCategory(category.id)}
                 >
-                  {/* Background Pattern */}
-                  <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-5 transition-opacity duration-300"></div>
+                  {/* Background Image */}
+                  <div className="absolute inset-0">
+                    <Image
+                      src={category.image}
+                      alt={category.name}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                    {/* Dark Overlay for Text Readability */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                  </div>
                   
-                  {/* Content */}
-                  <div className="relative z-10">
+                  {/* Content - EMOJI REMOVED */}
+                  <div className="relative z-10 p-8 text-white">
                     <div className="flex items-center justify-between mb-4">
-                      <div className="text-4xl">{category.emoji}</div>
+                      {/* EMOJI DIV REMOVED */}
+                      <div></div>
                       <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1 text-sm font-semibold">
                         {category.count} {category.count === 1 ? 'tour' : 'tours'}
                       </div>
@@ -411,7 +397,7 @@ export default function KilimanjaroPage() {
                       ))}
                     </div>
                     
-                    <div className="flex justify-between items-center text-sm">
+                    <div className="flex flex-wrap gap-2 items-center text-sm">
                       <span className="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1">
                         {category.difficulty}
                       </span>
@@ -425,14 +411,11 @@ export default function KilimanjaroPage() {
                       )}
                     </div>
                   </div>
-
-                  {/* Hover Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               ))}
             </div>
 
-            {/* Quick Stats */}
+            {/* Quick Stats - ⭐ REMOVED */}
             <div className="bg-gradient-to-r from-blue-50 to-indigo-100 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-3xl p-8 text-center">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div>
@@ -448,7 +431,7 @@ export default function KilimanjaroPage() {
                   <div className="text-gray-600 dark:text-gray-400 text-sm">Summit Height</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-gray-800 dark:text-white">⭐ 4.9</div>
+                  <div className="text-2xl font-bold text-gray-800 dark:text-white">4.9</div>
                   <div className="text-gray-600 dark:text-gray-400 text-sm">Average Rating</div>
                 </div>
               </div>
@@ -457,7 +440,7 @@ export default function KilimanjaroPage() {
         </div>
       </section>
 
-      {/* NEW: Packages Display Section - Shows packages from selected category */}
+      {/* Packages Display Section */}
       {selectedCategory && (
         <section className="py-16 bg-white dark:bg-gray-800 transition-colors duration-300">
           <div className="container mx-auto px-4">
@@ -481,9 +464,8 @@ export default function KilimanjaroPage() {
               </div>
 
               {filteredTours.length > 0 ? (
-                // FIXED: Pass the filteredTours directly to ToursGrid
                 <ToursGrid 
-                  tours={filteredTours} // This prop will now be used
+                  tours={filteredTours}
                   onBookNow={handleBookNow} 
                   activeSection="kilimanjaro"
                 />
@@ -557,7 +539,7 @@ export default function KilimanjaroPage() {
 
             <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-lg text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
               <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">⚡</span>
+                <span className="text-2xl">👥</span>
               </div>
               <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4">Small Groups</h3>
               <p className="text-gray-600 dark:text-gray-300">
@@ -596,11 +578,11 @@ export default function KilimanjaroPage() {
                 onClick={() => document.getElementById('experience-section')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-white text-orange-600 hover:bg-orange-50"
               >
-                🥾 Choose Your Experience
+                Choose Your Experience
               </Button>
               <Link href="/safari">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600">
-                  🦁 Add a Safari Adventure?
+                  Add a Safari Adventure?
                 </Button>
               </Link>
             </div>

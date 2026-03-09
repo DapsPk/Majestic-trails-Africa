@@ -8,6 +8,7 @@ import TourFilters from '@/features/tours/components/TourFilters';
 import BookingModal from '@/features/booking/components/BookingModal';
 import Button from '@/components/ui/Button';
 import Link from 'next/link';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 
 export default function ZanzibarPage() {
   const [selectedTour, setSelectedTour] = useState<Tour | null>(null);
@@ -305,7 +306,7 @@ export default function ZanzibarPage() {
         </div>
       </section>
 
-      {/* Zanzibar Description Section */}
+      {/* Zanzibar Description Section - UPDATED WITH REAL IMAGE */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -361,13 +362,23 @@ export default function ZanzibarPage() {
               </div>
             </div>
 
-            {/* Visual */}
+            {/* Visual - UPDATED WITH REAL IMAGE */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-cyan-400 to-blue-600 h-96 rounded-3xl flex items-center justify-center text-white shadow-2xl">
-                <div className="text-center">
-                  <div className="text-8xl mb-4">🌊</div>
-                  <p className="text-2xl font-bold mb-2">Indian Ocean Gem</p>
-                  <p className="text-lg opacity-90">Tropical Paradise Awaits</p>
+              <div className="h-96 rounded-3xl overflow-hidden shadow-2xl relative">
+                <OptimizedImage
+                  src="/images/zanzibar/description/beach.jpg"
+                  alt="Zanzibar beach paradise with turquoise waters and white sand"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={85}
+                  priority
+                  className="transition-transform duration-700 hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                  <div className="text-center text-white">
+                    <p className="text-2xl font-bold mb-2">Indian Ocean Gem</p>
+                    <p className="text-lg opacity-90">Tropical Paradise Awaits</p>
+                  </div>
                 </div>
               </div>
               <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-lg border border-cyan-200">

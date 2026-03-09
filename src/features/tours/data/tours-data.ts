@@ -10,6 +10,13 @@ export const toursData: Tour[] = [
     duration: '8 days',
     difficulty: 'Difficult',
     image: '/images/kilimanjaro-lemosho.jpg',
+    // ADDED: Optimized images object
+    images: {
+      main: '/images/tours/kilimanjaro/lemosho-8days/main.jpg',
+      mobile: '/images/tours/kilimanjaro/lemosho-8days/main.jpg',
+      thumbnail: '/images/tours/kilimanjaro/lemosho-8days/main.jpg',
+      alt: 'Lemosho Route on Mount Kilimanjaro showing scenic western views with hikers on trail'
+    },
     location: 'Mount Kilimanjaro',
     highlights: ['Highest Success Rate', 'Spectacular Scenery', 'Gradual Acclimatization', 'Barranco Wall', 'Wildlife Spotting'],
     rating: 4.9,
@@ -19,7 +26,6 @@ export const toursData: Tour[] = [
     packageType: 'climbing',
     routeType: 'lemosho',
     successRate: 90,
-    // NEW KILIMANJARO FIELDS ADDED - ALL ORIGINAL CODE PRESERVED
     kilimanjaroCategory: 'multi-day-climbs',
     acclimatizationDays: 3,
     groupSize: 'small-group',
@@ -116,6 +122,12 @@ export const toursData: Tour[] = [
     duration: '7 days',
     difficulty: 'Difficult',
     image: '/images/kilimanjaro-machame.jpg',
+    images: {
+      main: '/images/tours/kilimanjaro/machame-7days/main.jpg',
+      mobile: '/images/tours/kilimanjaro/machame-7days/main.jpg',
+      thumbnail: '/images/tours/kilimanjaro/machame-7days/main.jpg',
+      alt: 'Machame Route on Mount Kilimanjaro with hikers ascending through varied landscapes'
+    },
     location: 'Mount Kilimanjaro',
     highlights: ['Summit Uhuru Peak', 'Scenic Machame Route', 'Professional Mountain Guides', 'All Meals Included', 'Camping Equipment'],
     rating: 4.9,
@@ -125,7 +137,6 @@ export const toursData: Tour[] = [
     packageType: 'climbing',
     routeType: 'machame',
     successRate: 85,
-    // NEW KILIMANJARO FIELDS ADDED - ALL ORIGINAL CODE PRESERVED
     kilimanjaroCategory: 'short-climbs',
     acclimatizationDays: 2,
     groupSize: 'small-group',
@@ -214,6 +225,12 @@ export const toursData: Tour[] = [
     duration: '6 days',
     difficulty: 'Moderate',
     image: '/images/kilimanjaro-marangu.jpg',
+    images: {
+      main: '/images/tours/kilimanjaro/marangu-6days/main.jpg',
+      mobile: '/images/tours/kilimanjaro/marangu-6days/main.jpg',
+      thumbnail: '/images/tours/kilimanjaro/marangu-6days/main.jpg',
+      alt: 'Marangu Route on Kilimanjaro with hikers staying in mountain huts along the trail'
+    },
     location: 'Mount Kilimanjaro',
     highlights: ['Hut Accommodation', 'Gradual Ascent', 'Five Climate Zones', 'All Meals Included'],
     rating: 4.7,
@@ -223,7 +240,6 @@ export const toursData: Tour[] = [
     packageType: 'climbing',
     routeType: 'marangu',
     successRate: 70,
-    // NEW KILIMANJARO FIELDS ADDED - ALL ORIGINAL CODE PRESERVED
     kilimanjaroCategory: 'short-climbs',
     acclimatizationDays: 1,
     groupSize: 'small-group',
@@ -303,6 +319,12 @@ export const toursData: Tour[] = [
     duration: '7 days',
     difficulty: 'Moderate',
     image: '/images/kilimanjaro-rongai.jpg',
+    images: {
+      main: '/images/tours/kilimanjaro/rongai-7days/main.jpg',
+      mobile: '/images/tours/kilimanjaro/rongai-7days/main.jpg',
+      thumbnail: '/images/tours/kilimanjaro/rongai-7days/main.jpg',
+      alt: 'Rongai Route on Kilimanjaro showing remote northern wilderness with gentle slopes'
+    },
     location: 'Mount Kilimanjaro',
     highlights: ['Remote Wilderness', 'Gentle Ascent', 'Less Crowded', 'Wildlife Spotting'],
     rating: 4.6,
@@ -312,7 +334,6 @@ export const toursData: Tour[] = [
     packageType: 'climbing',
     routeType: 'rongai',
     successRate: 80,
-    // NEW KILIMANJARO FIELDS ADDED - ALL ORIGINAL CODE PRESERVED
     kilimanjaroCategory: 'short-climbs',
     acclimatizationDays: 2,
     groupSize: 'small-group',
@@ -401,6 +422,12 @@ export const toursData: Tour[] = [
     duration: '9 days',
     difficulty: 'Difficult',
     image: '/images/kilimanjaro-northern.jpg',
+    images: {
+      main: '/images/tours/kilimanjaro/northern-circuit-9days/main.jpg',
+      mobile: '/images/tours/kilimanjaro/northern-circuit-9days/main.jpg',
+      thumbnail: '/images/tours/kilimanjaro/northern-circuit-9days/main.jpg',
+      alt: 'Northern Circuit Route on Mount Kilimanjaro with 360-degree panoramic views'
+    },
     location: 'Mount Kilimanjaro',
     highlights: ['Highest Success Rate', '360° Panoramic Views', 'Gradual Acclimatization', 'Remote Wilderness'],
     rating: 4.9,
@@ -410,7 +437,6 @@ export const toursData: Tour[] = [
     packageType: 'climbing',
     routeType: 'northern-circuit',
     successRate: 95,
-    // NEW KILIMANJARO FIELDS ADDED - ALL ORIGINAL CODE PRESERVED
     kilimanjaroCategory: 'multi-day-climbs',
     acclimatizationDays: 4,
     groupSize: 'small-group',
@@ -517,6 +543,12 @@ export const toursData: Tour[] = [
     duration: '1 day',
     difficulty: 'Easy',
     image: '/images/materuni-waterfall.jpg',
+    images: {
+      main: '/images/tours/kilimanjaro/materuni-day-trip/main.png',
+      mobile: '/images/tours/kilimanjaro/materuni-day-trip/main.png',
+      thumbnail: '/images/tours/kilimanjaro/materuni-day-trip/main.png',
+      alt: 'Materuni Waterfall in Kilimanjaro region with lush vegetation and cascading water'
+    },
     location: 'Materuni Village, Kilimanjaro',
     highlights: ['90m Waterfall', 'Coffee Making Experience', 'Chagga Culture', 'Mountain Views', 'Traditional Lunch'],
     rating: 4.8,
@@ -525,7 +557,6 @@ export const toursData: Tour[] = [
     section: 'kilimanjaro',
     packageType: 'day-trip',
     activityType: 'pre-climb',
-    // NEW KILIMANJARO FIELDS ADDED - ALL ORIGINAL CODE PRESERVED
     kilimanjaroCategory: 'day-trips',
     groupSize: 'small-group',
     fitnessLevel: 'beginner',
@@ -561,6 +592,12 @@ export const toursData: Tour[] = [
     duration: '1 day',
     difficulty: 'Easy',
     image: '/images/chemka-hotsprings.jpg',
+    images: {
+      main: '/images/tours/kilimanjaro/chemka-hotsprings/main.png',
+      mobile: '/images/tours/kilimanjaro/chemka-hotsprings/main.png',
+      thumbnail: '/images/tours/kilimanjaro/chemka-hotsprings/main.png',
+      alt: 'Chemka Hot Springs with crystal clear turquoise water in natural jungle setting'
+    },
     location: 'Chemka Hot Springs, Kilimanjaro',
     highlights: ['Natural Hot Springs', 'Crystal Clear Water', 'Relaxation', 'Swimming', 'Picnic Lunch'],
     rating: 4.7,
@@ -569,7 +606,6 @@ export const toursData: Tour[] = [
     section: 'kilimanjaro',
     packageType: 'day-trip',
     activityType: 'post-climb',
-    // NEW KILIMANJARO FIELDS ADDED - ALL ORIGINAL CODE PRESERVED
     kilimanjaroCategory: 'day-trips',
     groupSize: 'small-group',
     fitnessLevel: 'beginner',
@@ -604,6 +640,12 @@ export const toursData: Tour[] = [
     duration: '1 day',
     difficulty: 'Easy',
     image: '/images/marangu-day-hike.jpg',
+    images: {
+      main: '/images/tours/kilimanjaro/marangu-day-hike/main.jpg',
+      mobile: '/images/tours/kilimanjaro/marangu-day-hike/main.jpg',
+      thumbnail: '/images/tours/kilimanjaro/marangu-day-hike/main.jpg',
+      alt: 'Day hike on Marangu Route through Kilimanjaro rainforest with Colobus monkeys'
+    },
     location: 'Marangu Route, Kilimanjaro',
     highlights: ['Rainforest Experience', 'Colobus Monkeys', 'Maundi Crater', 'Mountain Views', 'Nature Walk'],
     rating: 4.5,
@@ -612,7 +654,6 @@ export const toursData: Tour[] = [
     section: 'kilimanjaro',
     packageType: 'day-trip',
     activityType: 'pre-climb',
-    // NEW KILIMANJARO FIELDS ADDED - ALL ORIGINAL CODE PRESERVED
     kilimanjaroCategory: 'day-trips',
     groupSize: 'small-group',
     fitnessLevel: 'beginner',
@@ -647,6 +688,12 @@ export const toursData: Tour[] = [
     duration: '2 days',
     difficulty: 'Moderate',
     image: '/images/horombo-trek.jpg',
+    images: {
+      main: '/images/tours/kilimanjaro/horombo-2day/main.jpg',
+      mobile: '/images/tours/kilimanjaro/horombo-2day/main.jpg',
+      thumbnail: '/images/tours/kilimanjaro/horombo-2day/main.jpg',
+      alt: 'Horombo Hut on Kilimanjaro with stargazing and moorland landscape views'
+    },
     location: 'Marangu Route, Kilimanjaro',
     highlights: ['Overnight Mountain Stay', 'Stargazing', 'Moorland Landscape', 'High-Altitude Experience', 'Hut Accommodation'],
     rating: 4.6,
@@ -655,7 +702,6 @@ export const toursData: Tour[] = [
     section: 'kilimanjaro',
     packageType: 'day-trip',
     activityType: 'pre-climb',
-    // NEW KILIMANJARO FIELDS ADDED - ALL ORIGINAL CODE PRESERVED
     kilimanjaroCategory: 'day-trips',
     groupSize: 'small-group',
     fitnessLevel: 'beginner',
@@ -703,6 +749,13 @@ export const toursData: Tour[] = [
     duration: '5 days/4 nights',
     difficulty: 'Easy',
     image: '/images/serengeti-pulse.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/serengeti/serengeti-5day-pulse/main.jpeg',
+      mobile: '/images/tours/serengeti/serengeti-5day-pulse/main.jpeg',
+      thumbnail: '/images/tours/serengeti/serengeti-5day-pulse/main.jpeg',
+      alt: '5-Day Serengeti Pulse safari showing the Great Migration across endless plains'
+    },
     location: 'Serengeti National Park',
     highlights: ['Great Migration Viewing', 'Predator Drama', 'Cultural Coffee Stop', 'Bush Breakfasts', 'Intimate Experience'],
     rating: 4.9,
@@ -783,6 +836,13 @@ export const toursData: Tour[] = [
     duration: '6 days/5 nights',
     difficulty: 'Easy',
     image: '/images/serengeti-odyssey.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/serengeti/serengeti-6day-odyssey/main.jpeg',
+      mobile: '/images/tours/serengeti/serengeti-6day-odyssey/main.jpeg',
+      thumbnail: '/images/tours/serengeti/serengeti-6day-odyssey/main.jpeg',
+      alt: '6-Day Serengeti Odyssey exploring the vast plains and river crossings'
+    },
     location: 'Serengeti National Park',
     highlights: ['Mara River Crossings', 'Northern Serengeti', 'Photography Focus', 'Night Game Drive', 'Bird Watching'],
     rating: 4.9,
@@ -870,6 +930,13 @@ export const toursData: Tour[] = [
     duration: '7 days/6 nights',
     difficulty: 'Easy',
     image: '/images/serengeti-ngorongoro-fusion.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/serengeti/serengeti-7day-fusion/main.jpeg',
+      mobile: '/images/tours/serengeti/serengeti-7day-fusion/main.jpeg',
+      thumbnail: '/images/tours/serengeti/serengeti-7day-fusion/main.jpeg',
+      alt: '7-Day Serengeti and Ngorongoro Fusion combining wildlife and crater views'
+    },
     location: 'Serengeti & Ngorongoro',
     highlights: ['Serengeti Migration', 'Ngorongoro Crater', 'Big Five', 'Cultural Dance', 'Fossil Site'],
     rating: 4.8,
@@ -965,6 +1032,13 @@ export const toursData: Tour[] = [
     duration: '8 days/7 nights',
     difficulty: 'Easy',
     image: '/images/serengeti-ultimate.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/serengeti/serengeti-8day-ultimate/main.jpeg',
+      mobile: '/images/tours/serengeti/serengeti-8day-ultimate/main.jpeg',
+      thumbnail: '/images/tours/serengeti/serengeti-8day-ultimate/main.jpeg',
+      alt: '8-Day Serengeti Ultimate covering every corner of the park'
+    },
     location: 'Serengeti National Park',
     highlights: ['Full Park Coverage', 'Night Drives', 'Walking Safari', 'Cultural Immersion', 'Photography Focus'],
     rating: 4.9,
@@ -1068,6 +1142,13 @@ export const toursData: Tour[] = [
     duration: '8 days/7 nights',
     difficulty: 'Easy',
     image: '/images/serengeti-family.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/serengeti/serengeti-8day-family/main.jpeg',
+      mobile: '/images/tours/serengeti/serengeti-8day-family/main.jpeg',
+      thumbnail: '/images/tours/serengeti/serengeti-8day-family/main.jpeg',
+      alt: '8-Day Serengeti Family Quest designed for families with kids'
+    },
     location: 'Serengeti National Park',
     highlights: ['Family-Friendly', 'Junior Guide', 'Animal Bingo', 'Bushcraft', 'Star Stories'],
     rating: 4.8,
@@ -1173,6 +1254,13 @@ export const toursData: Tour[] = [
     duration: '1 day',
     difficulty: 'Easy',
     image: '/images/serengeti-spark.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/serengeti/serengeti-1day-spark/main.jpeg',
+      mobile: '/images/tours/serengeti/serengeti-1day-spark/main.jpeg',
+      thumbnail: '/images/tours/serengeti/serengeti-1day-spark/main.jpeg',
+      alt: '1-Day Serengeti Spark quick safari with Big Five viewing'
+    },
     location: 'Serengeti National Park',
     highlights: ['Big Five Blitz', 'Flight Included', 'Full Day Safari', 'Expert Guide', 'Lunch Included'],
     rating: 4.6,
@@ -1217,6 +1305,13 @@ export const toursData: Tour[] = [
     duration: '2 days/1 night',
     difficulty: 'Easy',
     image: '/images/serengeti-teaser.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/serengeti/serengeti-2day-teaser/main.jpeg',
+      mobile: '/images/tours/serengeti/serengeti-2day-teaser/main.jpeg',
+      thumbnail: '/images/tours/serengeti/serengeti-2day-teaser/main.jpeg',
+      alt: '2-Day Serengeti Teaser overnight safari capturing dawn and dusk'
+    },
     location: 'Serengeti National Park',
     highlights: ['Golden Hour Photography', 'Overnight Stay', 'Sunrise/Sunset Drives', 'Camp Experience'],
     rating: 4.5,
@@ -1270,6 +1365,13 @@ export const toursData: Tour[] = [
     duration: '3 days/2 nights',
     difficulty: 'Easy',
     image: '/images/serengeti-trail.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/serengeti/serengeti-3day-trail/main.jpeg',
+      mobile: '/images/tours/serengeti/serengeti-3day-trail/main.jpeg',
+      thumbnail: '/images/tours/serengeti/serengeti-3day-trail/main.jpeg',
+      alt: '3-Day Serengeti Trail following the Great Migration routes'
+    },
     location: 'Serengeti National Park',
     highlights: ['Migration Routes', 'Central & Western Serengeti', 'River Viewing', 'Full Safari Experience'],
     rating: 4.7,
@@ -1331,6 +1433,13 @@ export const toursData: Tour[] = [
     duration: '3 days/2 nights',
     difficulty: 'Easy',
     image: '/images/serengeti-serenity.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/serengeti/serengeti-3day-serenity/main.jpg',
+      mobile: '/images/tours/serengeti/serengeti-3day-serenity/main.jpg',
+      thumbnail: '/images/tours/serengeti/serengeti-3day-serenity/main.jpg',
+      alt: '3-Day Serengeti Serenity peaceful safari in less-visited areas'
+    },
     location: 'Serengeti National Park',
     highlights: ['Tranquil Locations', 'Sunset Sundowners', 'Luxury Camp', 'Peaceful Game Drives'],
     rating: 4.6,
@@ -1394,6 +1503,13 @@ export const toursData: Tour[] = [
     duration: '3 days/2 nights',
     difficulty: 'Easy',
     image: '/images/tarangire-explorer.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/tarangire/tarangire-explorer-3days/main.jpeg',
+      mobile: '/images/tours/tarangire/tarangire-explorer-3days/main.jpeg',
+      thumbnail: '/images/tours/tarangire/tarangire-explorer-3days/main.jpeg',
+      alt: '3-Day Tarangire Explorer safari with elephant herds and baobab trees'
+    },
     location: 'Tarangire National Park',
     highlights: ['Elephant Super Herds', 'Baobab Landscapes', 'Diverse Birdlife', 'Intimate Safari Experience', 'Sunset Game Drives'],
     rating: 4.8,
@@ -1458,6 +1574,13 @@ export const toursData: Tour[] = [
     duration: '4 days/3 nights',
     difficulty: 'Easy',
     image: '/images/tarangire-immersion.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/tarangire/tarangire-immersion-4days/main.jpeg',
+      mobile: '/images/tours/tarangire/tarangire-immersion-4days/main.jpeg',
+      thumbnail: '/images/tours/tarangire/tarangire-immersion-4days/main.jpeg',
+      alt: '4-Day Tarangire Immersion with walking safari and luxury tented camp'
+    },
     location: 'Tarangire National Park',
     highlights: ['Walking Safari', 'Maasai Cultural Visit', 'Luxury Tented Camp', 'Photography Focus', 'Sundowner Experience'],
     rating: 4.9,
@@ -1530,6 +1653,13 @@ export const toursData: Tour[] = [
     duration: '6 days/5 nights',
     difficulty: 'Moderate',
     image: '/images/grand-tarangire.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/tarangire/grand-tarangire-6days/main.jpeg',
+      mobile: '/images/tours/tarangire/grand-tarangire-6days/main.jpeg',
+      thumbnail: '/images/tours/tarangire/grand-tarangire-6days/main.jpeg',
+      alt: '6-Day Grand Tarangire Safari with remote wilderness camping'
+    },
     location: 'Tarangire National Park',
     highlights: ['Remote Wilderness Camping', 'Night Safaris', 'Expert Naturalist Guides', 'Photography Focus', 'Exclusive Access'],
     rating: 5.0,
@@ -1621,6 +1751,13 @@ export const toursData: Tour[] = [
     duration: '1 day',
     difficulty: 'Easy',
     image: '/images/tarangire-day-safari.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/tarangire/tarangire-day-safari/main.jpeg',
+      mobile: '/images/tours/tarangire/tarangire-day-safari/main.jpeg',
+      thumbnail: '/images/tours/tarangire/tarangire-day-safari/main.jpeg',
+      alt: 'Day safari in Tarangire National Park with guaranteed elephant encounters'
+    },
     location: 'Tarangire National Park',
     highlights: ['Convenient Day Trip', 'Maximum Wildlife in Minimum Time', 'Elephant Encounters Guaranteed', 'Comprehensive Park Tour', 'Hot Lunch Included'],
     rating: 4.6,
@@ -1668,6 +1805,13 @@ export const toursData: Tour[] = [
     duration: '2 days/1 night',
     difficulty: 'Easy',
     image: '/images/tarangire-weekend.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/tarangire/tarangire-weekend-escape/main.jpg',
+      mobile: '/images/tours/tarangire/tarangire-weekend-escape/main.jpg',
+      thumbnail: '/images/tours/tarangire/tarangire-weekend-escape/main.jpg',
+      alt: 'Weekend safari getaway in Tarangire with sunrise and sunset game drives'
+    },
     location: 'Tarangire National Park',
     highlights: ['Perfect Weekend Getaway', 'Sunrise & Sunset Safaris', 'Relaxation Time at Lodge', 'Efficient Yet Comprehensive', 'Pool & River Views'],
     rating: 4.7,
@@ -1724,6 +1868,13 @@ export const toursData: Tour[] = [
     duration: '3 days/2 nights',
     difficulty: 'Easy',
     image: '/images/tarangire-express.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/tarangire/tarangire-express-3days/main.jpeg',
+      mobile: '/images/tours/tarangire/tarangire-express-3days/main.jpeg',
+      thumbnail: '/images/tours/tarangire/tarangire-express-3days/main.jpeg',
+      alt: '3-Day Tarangire Express with authentic tented camp experience'
+    },
     location: 'Tarangire National Park',
     highlights: ['Balanced Wildlife & Culture', 'Authentic Tented Camp Experience', 'Comprehensive But Concise', 'Maasai Cultural Visit', 'Bush Dinner Option'],
     rating: 4.5,
@@ -1791,6 +1942,13 @@ export const toursData: Tour[] = [
     duration: '4 days/3 nights',
     difficulty: 'Easy',
     image: '/images/tarangire-family.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/tarangire/tarangire-family-adventure/main.jpg',
+      mobile: '/images/tours/tarangire/tarangire-family-adventure/main.jpg',
+      thumbnail: '/images/tours/tarangire/tarangire-family-adventure/main.jpg',
+      alt: 'Family-friendly Tarangire safari with educational activities for children'
+    },
     location: 'Tarangire National Park',
     highlights: ['Child-Friendly Activities', 'Educational Programs', 'Flexible Scheduling', 'Family Bonding', 'Safe Environment', 'Junior Ranger Program'],
     rating: 4.9,
@@ -1864,6 +2022,13 @@ export const toursData: Tour[] = [
     duration: '5 days/4 nights',
     difficulty: 'Easy',
     image: '/images/tarangire-group.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/tarangire/tarangire-group-adventure/main.jpg',
+      mobile: '/images/tours/tarangire/tarangire-group-adventure/main.jpg',
+      thumbnail: '/images/tours/tarangire/tarangire-group-adventure/main.jpg',
+      alt: 'Group adventure in Tarangire with team bonding and shared experiences'
+    },
     location: 'Tarangire National Park',
     highlights: ['Team Bonding Experiences', 'Flexible Group Activities', 'Shared Adventures', 'Celebratory Atmosphere', 'Cost-Effective for Groups', 'Private Experiences'],
     rating: 4.8,
@@ -1948,6 +2113,13 @@ export const toursData: Tour[] = [
     duration: '3 days/2 nights',
     difficulty: 'Easy',
     image: '/images/ngorongoro-classic.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/ngorongoro/ngorongoro-classic-3days/main.jpeg',
+      mobile: '/images/tours/ngorongoro/ngorongoro-classic-3days/main.jpeg',
+      thumbnail: '/images/tours/ngorongoro/ngorongoro-classic-3days/main.jpeg',
+      alt: 'Classic 3-day Ngorongoro Crater safari with Big Five viewing'
+    },
     location: 'Ngorongoro Crater',
     highlights: ['Big Five in one day', 'Black rhino sightings', 'Crater rim views', 'Archaeological history', 'Maasai cultural interaction'],
     rating: 4.9,
@@ -2013,6 +2185,13 @@ export const toursData: Tour[] = [
     duration: '4 days/3 nights',
     difficulty: 'Easy',
     image: '/images/ngorongoro-discovery.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/ngorongoro/ngorongoro-discovery-4days/main.jpeg',
+      mobile: '/images/tours/ngorongoro/ngorongoro-discovery-4days/main.jpeg',
+      thumbnail: '/images/tours/ngorongoro/ngorongoro-discovery-4days/main.jpeg',
+      alt: '4-day Ngorongoro Discovery with luxury crater rim accommodation'
+    },
     location: 'Ngorongoro Crater',
     highlights: ['Luxury crater rim accommodation', 'Empakaai walking safari', 'Archaeological exploration', 'Extended crater time', 'Maasai cultural depth'],
     rating: 4.9,
@@ -2085,6 +2264,13 @@ export const toursData: Tour[] = [
     duration: '6 days/5 nights',
     difficulty: 'Moderate',
     image: '/images/ngorongoro-grand-explorer.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/ngorongoro/ngorongoro-grand-explorer-6days/main.jpeg',
+      mobile: '/images/tours/ngorongoro/ngorongoro-grand-explorer-6days/main.jpeg',
+      thumbnail: '/images/tours/ngorongoro/ngorongoro-grand-explorer-6days/main.jpeg',
+      alt: '6-day Ngorongoro Grand Explorer with multiple crater descents and luxury camping'
+    },
     location: 'Ngorongoro Crater',
     highlights: ['World-class luxury accommodation', 'Multiple crater descents', 'Remote crater expeditions', 'Walking safaris', 'Archaeological depth'],
     rating: 5.0,
@@ -2176,6 +2362,13 @@ export const toursData: Tour[] = [
     duration: '1 day',
     difficulty: 'Easy',
     image: '/images/ngorongoro-day-safari.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/ngorongoro/ngorongoro-day-crater-safari/main.jpeg',
+      mobile: '/images/tours/ngorongoro/ngorongoro-day-crater-safari/main.jpeg',
+      thumbnail: '/images/tours/ngorongoro/ngorongoro-day-crater-safari/main.jpeg',
+      alt: 'One-day Ngorongoro Crater safari with Big Five viewing'
+    },
     location: 'Ngorongoro Crater',
     highlights: ['Maximum wildlife minimum time', 'Big Five potential', 'World wonder visited', 'Efficient comprehensive experience', 'Guaranteed incredible sightings'],
     rating: 4.7,
@@ -2223,6 +2416,13 @@ export const toursData: Tour[] = [
     duration: '2 days/1 night',
     difficulty: 'Easy',
     image: '/images/ngorongoro-weekend.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/ngorongoro/ngorongoro-weekend-escape/main.jpg',
+      mobile: '/images/tours/ngorongoro/ngorongoro-weekend-escape/main.jpg',
+      thumbnail: '/images/tours/ngorongoro/ngorongoro-weekend-escape/main.jpg',
+      alt: 'Weekend getaway to Ngorongoro Crater with crater rim accommodation'
+    },
     location: 'Ngorongoro Crater',
     highlights: ['Perfect weekend adventure', 'Crater rim accommodation', 'Comprehensive crater tour', 'Sunrise and sunset experiences', 'Efficient yet thorough'],
     rating: 4.6,
@@ -2279,6 +2479,13 @@ export const toursData: Tour[] = [
     duration: '3 days/2 nights',
     difficulty: 'Easy',
     image: '/images/ngorongoro-highlights.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/ngorongoro/ngorongoro-highlights-3days/main.jpg',
+      mobile: '/images/tours/ngorongoro/ngorongoro-highlights-3days/main.jpg',
+      thumbnail: '/images/tours/ngorongoro/ngorongoro-highlights-3days/main.jpg',
+      alt: 'Ngorongoro highlights tour with coffee plantation and crater views'
+    },
     location: 'Ngorongoro Crater',
     highlights: ['Charming accommodation', 'Full crater day', 'Archaeological exploration', 'Cultural depth', 'Coffee experience'],
     rating: 4.5,
@@ -2308,7 +2515,7 @@ export const toursData: Tour[] = [
       {
         day: 3,
         title: 'Olduvai & Departure',
-        description: 'Morning visit to Olduvai Gorge archaeological site, the \"Cradle of Mankind.\" Learn about human evolution discoveries. Optional stop at Shifting Sands or Maasai market. Scenic return to Arusha through Great Rift Valley.',
+        description: 'Morning visit to Olduvai Gorge archaeological site, the "Cradle of Mankind." Learn about human evolution discoveries. Optional stop at Shifting Sands or Maasai market. Scenic return to Arusha through Great Rift Valley.',
         activities: ['Olduvai Gorge visit', 'Archaeological learning', 'Museum exploration', 'Cultural market', 'Return transfer'],
         meals: ['Breakfast', 'Lunch'],
         accommodation: 'Not included'
@@ -2346,6 +2553,13 @@ export const toursData: Tour[] = [
     duration: '4 days/3 nights',
     difficulty: 'Easy',
     image: '/images/ngorongoro-family.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/ngorongoro/ngorongoro-family-safari/main.jpeg',
+      mobile: '/images/tours/ngorongoro/ngorongoro-family-safari/main.jpeg',
+      thumbnail: '/images/tours/ngorongoro/ngorongoro-family-safari/main.jpeg',
+      alt: 'Family safari in Ngorongoro Crater with child-friendly activities'
+    },
     location: 'Ngorongoro Crater',
     highlights: ['Child-friendly activities', 'Educational programs', 'Flexible scheduling', 'Family bonding', 'Safe environments', 'Junior ranger certification'],
     rating: 4.8,
@@ -2419,6 +2633,13 @@ export const toursData: Tour[] = [
     duration: '5 days/4 nights',
     difficulty: 'Easy',
     image: '/images/ngorongoro-group.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/ngorongoro/ngorongoro-group-adventure/main.jpg',
+      mobile: '/images/tours/ngorongoro/ngorongoro-group-adventure/main.jpg',
+      thumbnail: '/images/tours/ngorongoro/ngorongoro-group-adventure/main.jpg',
+      alt: 'Group adventure in Ngorongoro Crater with team activities'
+    },
     location: 'Ngorongoro Crater',
     highlights: ['Shared adventures', 'Team bonding activities', 'Flexible for different interests', 'Cost-effective group rates', 'Celebration opportunities'],
     rating: 4.7,
@@ -2491,6 +2712,74 @@ export const toursData: Tour[] = [
     accommodations: 'Private group lodge booking at Ngorongoro Sopa Lodge or exclusive camping on crater rim - Group\'s choice based on preference and budget',
     experience: 'Shared adventures, team bonding activities, flexible for different interests, cost-effective group rates, celebration opportunities, private experiences, competitive fun elements, memorable group moments, and customizable activities in Africa\'s most spectacular group safari destination.'
   },
+  {
+    id: 'ngorongoro-expedition',
+    title: 'Ngorongoro Crater Expedition',
+    description: 'Descend into the world\'s largest intact volcanic caldera for unparalleled wildlife density.',
+    overview: 'Comprehensive Ngorongoro experience with expert guides and comfortable accommodations.',
+    price: 1799,
+    duration: '3 days/2 nights',
+    difficulty: 'Easy',
+    image: '/images/ngorongoro-expedition.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/ngorongoro/ngorongoro-expedition/main.jpeg',
+      mobile: '/images/tours/ngorongoro/ngorongoro-expedition/main.jpeg',
+      thumbnail: '/images/tours/ngorongoro/ngorongoro-expedition/main.jpeg',
+      alt: 'Ngorongoro Crater expedition with wildlife viewing in the caldera'
+    },
+    location: 'Ngorongoro Crater',
+    highlights: ['Crater Floor Safari', 'Big Five Encounters', 'Lodge Accommodation', 'Maasai Culture'],
+    rating: 4.8,
+    reviewCount: 94,
+    category: 'safari',
+    section: 'safari',
+    packageType: 'safari-package',
+    subCategory: 'ngorongoro',
+    tourStyle: 'multi-day',
+    itinerary: [
+      {
+        day: 1,
+        title: 'Arusha to Ngorongoro Highlands',
+        description: 'Scenic drive to Ngorongoro Conservation Area, settling into your lodge on the crater rim with spectacular views.',
+        activities: ['Scenic drive', 'Lodge check-in', 'Highlands exploration'],
+        meals: ['Lunch', 'Dinner'],
+        accommodation: 'Lodge on Crater Rim'
+      },
+      {
+        day: 2,
+        title: 'Ngorongoro Crater Full Day',
+        description: 'Descend into the crater for a full day of game viewing. Encounter lions, elephants, rhinos, hippos, and more in this natural amphitheater.',
+        activities: ['Early descent into crater', 'Full day game drive', 'Picnic lunch'],
+        meals: ['Breakfast', 'Lunch', 'Dinner'],
+        accommodation: 'Lodge on Crater Rim'
+      },
+      {
+        day: 3,
+        title: 'Maasai Village & Return',
+        description: 'Visit a traditional Maasai village for cultural exchange before returning to Arusha.',
+        activities: ['Maasai village visit', 'Cultural experience', 'Return drive'],
+        meals: ['Breakfast', 'Lunch'],
+        accommodation: 'Not included'
+      }
+    ],
+    inclusions: [
+      'Professional guide',
+      'All park and crater fees',
+      'Lodge accommodation',
+      'All meals',
+      '4x4 safari vehicle',
+      'Maasai village visit'
+    ],
+    exclusions: [
+      'International flights',
+      'Visa fees',
+      'Insurance',
+      'Personal expenses',
+      'Tips',
+      'Extra activities'
+    ]
+  },
 
   // ========== NGORONGORO COMBINATION PACKAGES ==========
   {
@@ -2502,6 +2791,13 @@ export const toursData: Tour[] = [
     duration: '5 days/4 nights',
     difficulty: 'Easy',
     image: '/images/ngorongoro-tarangire-combo.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/safari/ngorongoro-tarangire-combo/main.jpeg',
+      mobile: '/images/tours/safari/ngorongoro-tarangire-combo/main.jpeg',
+      thumbnail: '/images/tours/safari/ngorongoro-tarangire-combo/main.jpeg',
+      alt: 'Combination safari covering Ngorongoro Crater and Tarangire National Park'
+    },
     location: 'Ngorongoro & Tarangire',
     highlights: ['Two iconic parks', 'Big Five viewing', 'Elephant super herds', 'Archaeological sites', 'Diverse ecosystems', 'Special offer savings'],
     rating: 4.8,
@@ -2547,7 +2843,7 @@ export const toursData: Tour[] = [
       {
         day: 5,
         title: 'Olduvai Gorge & Departure',
-        description: 'Morning visit to Olduvai Gorge archaeological site, the \"Cradle of Mankind.\" Learn about human evolution discoveries. Optional Maasai craft market visit. Scenic return to Arusha through Great Rift Valley.',
+        description: 'Morning visit to Olduvai Gorge archaeological site, the "Cradle of Mankind." Learn about human evolution discoveries. Optional Maasai craft market visit. Scenic return to Arusha through Great Rift Valley.',
         activities: ['Olduvai Gorge visit', 'Archaeological learning', 'Museum exploration', 'Cultural market', 'Return transfer'],
         meals: ['Breakfast', 'Lunch'],
         accommodation: 'Not included'
@@ -2583,6 +2879,13 @@ export const toursData: Tour[] = [
     duration: '7 days/6 nights',
     difficulty: 'Easy',
     image: '/images/northern-circuit-grand.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/safari/northern-circuit-grand-safari/main.jpeg',
+      mobile: '/images/tours/safari/northern-circuit-grand-safari/main.jpeg',
+      thumbnail: '/images/tours/safari/northern-circuit-grand-safari/main.jpeg',
+      alt: 'Complete Northern Circuit safari covering Tanzania\'s most famous parks'
+    },
     location: 'Northern Tanzania Circuit',
     highlights: ['Comprehensive northern circuit', 'All Big Five animals', 'Diverse landscapes', 'Archaeological exploration', 'Cultural immersion', 'Luxury accommodation'],
     rating: 4.9,
@@ -2628,7 +2931,7 @@ export const toursData: Tour[] = [
       {
         day: 5,
         title: 'Cultural & Archaeological Day',
-        description: 'Morning visit to Olduvai Gorge, the \"Cradle of Mankind\" with expert archaeological guide. Afternoon Maasai cultural immersion with traditional activities and village life experience.',
+        description: 'Morning visit to Olduvai Gorge, the "Cradle of Mankind" with expert archaeological guide. Afternoon Maasai cultural immersion with traditional activities and village life experience.',
         activities: ['Olduvai Gorge visit', 'Archaeological exploration', 'Maasai village', 'Cultural activities', 'Traditional learning'],
         meals: ['Breakfast', 'Lunch', 'Dinner'],
         accommodation: 'Ngorongoro Serena Lodge'
@@ -2682,6 +2985,13 @@ export const toursData: Tour[] = [
     duration: '5 days',
     difficulty: 'Easy',
     image: '/images/serengeti-migration.jpg',
+    // ADDED: Images object for safari package
+    images: {
+      main: '/images/tours/serengeti/serengeti-migration/main.jpeg',
+      mobile: '/images/tours/serengeti/serengeti-migration/main.jpeg',
+      thumbnail: '/images/tours/serengeti/serengeti-migration/main.jpeg',
+      alt: 'Great Migration safari in Serengeti with wildebeest crossings'
+    },
     location: 'Serengeti National Park',
     highlights: ['Great Migration Viewing', 'Big Five Safari', 'Luxury Tented Camps', 'Professional Guide'],
     rating: 4.9,
@@ -2750,132 +3060,6 @@ export const toursData: Tour[] = [
       'Tips for guides'
     ]
   },
-  {
-    id: 'ngorongoro-expedition',
-    title: 'Ngorongoro Crater Expedition',
-    description: 'Descend into the world\'s largest intact volcanic caldera for unparalleled wildlife density.',
-    price: 1799,
-    duration: '3 days',
-    difficulty: 'Easy',
-    image: '/images/ngorongoro-crater.jpg',
-    location: 'Ngorongoro Conservation Area',
-    highlights: ['Crater Floor Safari', 'Big Five Encounters', 'Lodge Accommodation', 'Maasai Culture'],
-    rating: 4.8,
-    reviewCount: 94,
-    category: 'safari',
-    section: 'safari',
-    subCategory: 'ngorongoro',
-    itinerary: [
-      {
-        day: 1,
-        title: 'Arusha to Ngorongoro Highlands',
-        description: 'Drive to Ngorongoro with scenic stops',
-        activities: ['Scenic drive', 'Lodge check-in', 'Highlands exploration'],
-        meals: ['Lunch', 'Dinner'],
-        accommodation: 'Lodge on Crater Rim'
-      },
-      {
-        day: 2,
-        title: 'Ngorongoro Crater Full Day',
-        description: 'Full day exploring the crater floor',
-        activities: ['Early descent into crater', 'Full day game drive', 'Picnic lunch'],
-        meals: ['Breakfast', 'Lunch', 'Dinner'],
-        accommodation: 'Lodge on Crater Rim'
-      },
-      {
-        day: 3,
-        title: 'Maasai Village & Return',
-        description: 'Cultural visit and return to Arusha',
-        activities: ['Maasai village visit', 'Cultural experience', 'Return drive'],
-        meals: ['Breakfast', 'Lunch'],
-        accommodation: 'Hotel (optional)'
-      }
-    ],
-    inclusions: [
-      'Professional guide',
-      'All park and crater fees',
-      'Lodge accommodation',
-      'All meals',
-      '4x4 safari vehicle',
-      'Maasai village visit'
-    ],
-    exclusions: [
-      'International flights',
-      'Visa fees',
-      'Insurance',
-      'Personal expenses',
-      'Tips',
-      'Extra activities'
-    ]
-  },
-
-  // ========== ZANZIBAR PACKAGES (Existing - Keeping for reference) ==========
-  {
-    id: 'zanzibar-beach-paradise',
-    title: 'Zanzibar Beach Paradise',
-    description: 'Luxury beach resort stay with cultural tours and water activities in paradise.',
-    price: 1599,
-    duration: '4 days',
-    difficulty: 'Easy',
-    image: '/images/zanzibar-beach.jpg',
-    location: 'Zanzibar',
-    highlights: ['Beachfront Resort', 'Stone Town Tour', 'Spice Farm Visit', 'Snorkeling Trip'],
-    rating: 4.7,
-    reviewCount: 143,
-    category: 'beach',
-    section: 'zanzibar',
-    itinerary: [
-      {
-        day: 1,
-        title: 'Arrival & Beach Relaxation',
-        description: 'Transfer to resort and beach time',
-        activities: ['Airport transfer', 'Resort check-in', 'Beach relaxation'],
-        meals: ['Dinner'],
-        accommodation: 'Beach Resort'
-      },
-      {
-        day: 2,
-        title: 'Stone Town Cultural Tour',
-        description: 'Explore UNESCO World Heritage site',
-        activities: ['Stone Town tour', 'Historical sites', 'Local market visit'],
-        meals: ['Breakfast', 'Lunch', 'Dinner'],
-        accommodation: 'Beach Resort'
-      },
-      {
-        day: 3,
-        title: 'Spice Farm & Snorkeling',
-        description: 'Spice plantation tour and ocean adventure',
-        activities: ['Spice farm tour', 'Snorkeling trip', 'Sunset dhow cruise'],
-        meals: ['Breakfast', 'Lunch', 'Dinner'],
-        accommodation: 'Beach Resort'
-      },
-      {
-        day: 4,
-        title: 'Beach Time & Departure',
-        description: 'Morning relaxation and transfer to airport',
-        activities: ['Beach time', 'Last swim', 'Airport transfer'],
-        meals: ['Breakfast', 'Lunch'],
-        accommodation: 'Departure'
-      }
-    ],
-    inclusions: [
-      'Beach resort accommodation',
-      'All transfers',
-      'Stone Town tour',
-      'Spice farm visit',
-      'Snorkeling trip',
-      'All meals',
-      'Dhow cruise'
-    ],
-    exclusions: [
-      'International flights',
-      'Zanzibar visa',
-      'Travel insurance',
-      'Personal expenses',
-      'Optional activities',
-      'Tips'
-    ]
-  },
 
   // ========== ZANZIBAR PACKAGES - PHASE 1: MULTI-DAY PACKAGES ==========
   {
@@ -2886,7 +3070,13 @@ export const toursData: Tour[] = [
     price: 950,
     duration: '5 days/4 nights',
     difficulty: 'Easy',
-    image: '/images/zanzibar-explorer.jpg',
+    image: '/images/tours/zanzibar/explorer/main.jpg',
+    images: {
+      main: '/images/tours/zanzibar/explorer/main.jpg',
+      mobile: '/images/tours/zanzibar/explorer/main.jpg',
+      thumbnail: '/images/tours/zanzibar/explorer/main.jpg',
+      alt: 'Zanzibar explorer tour showing Stone Town culture and pristine Indian Ocean beaches'
+    },
     location: 'Zanzibar',
     highlights: ['Stone Town Cultural Immersion', 'Spice Plantation Education', 'Pristine Beach Relaxation', 'World-Class Snorkeling', 'Giant Tortoises', 'Swahili Cuisine'],
     rating: 4.8,
@@ -2944,7 +3134,7 @@ export const toursData: Tour[] = [
       'All meals as specified',
       'Professional English-speaking guide',
       'Stone Town walking tour',
-      'Spice plantation tour with tasting',
+      'Spice plantation tour',
       'Snorkeling equipment',
       'Prison Island boat trip',
       'All entrance fees and taxes'
@@ -2968,7 +3158,13 @@ export const toursData: Tour[] = [
     price: 1480,
     duration: '7 days/6 nights',
     difficulty: 'Easy',
-    image: '/images/zanzibar-immersion.jpg',
+    image: '/images/tours/zanzibar/immersion/main.jpg',
+    images: {
+      main: '/images/tours/zanzibar/immersion/main.jpg',
+      mobile: '/images/tours/zanzibar/immersion/main.jpg',
+      thumbnail: '/images/tours/zanzibar/immersion/main.jpg',
+      alt: 'Zanzibar immersion tour with authentic Swahili experiences and marine adventures'
+    },
     location: 'Zanzibar',
     highlights: ['Comprehensive Cultural Immersion', 'Authentic Swahili Experiences', 'World-Class Marine Life', 'Endemic Wildlife', 'Cooking Classes', 'Village Interactions'],
     rating: 4.9,
@@ -3066,7 +3262,13 @@ export const toursData: Tour[] = [
     price: 2350,
     duration: '10 days/9 nights',
     difficulty: 'Easy',
-    image: '/images/zanzibar-grand-tour.jpg',
+    image: '/images/tours/zanzibar/grand-tour/main.jpg',
+    images: {
+      main: '/images/tours/zanzibar/grand-tour/main.jpg',
+      mobile: '/images/tours/zanzibar/grand-tour/main.jpg',
+      thumbnail: '/images/tours/zanzibar/grand-tour/main.jpg',
+      alt: 'Complete Zanzibar island tour covering all major attractions and diverse experiences'
+    },
     location: 'Zanzibar',
     highlights: ['Complete Island Exploration', 'All Major Attractions', 'Diverse Accommodations', 'Comprehensive Cultural Immersion', 'Extensive Marine Adventures', 'Photography Opportunities'],
     rating: 5.0,
@@ -3190,7 +3392,13 @@ export const toursData: Tour[] = [
     price: 580,
     duration: '3 days/2 nights',
     difficulty: 'Easy',
-    image: '/images/zanzibar-highlights.jpg',
+    image: '/images/tours/zanzibar/highlights/main.jpg',
+    images: {
+      main: '/images/tours/zanzibar/highlights/main.jpg',
+      mobile: '/images/tours/zanzibar/highlights/main.jpg',
+      thumbnail: '/images/tours/zanzibar/highlights/main.jpg',
+      alt: 'Essential Zanzibar highlights tour covering Stone Town, spice farms and beaches'
+    },
     location: 'Zanzibar',
     highlights: ['Essential Zanzibar in Short Time', 'Cultural Highlights', 'Beach Relaxation', 'Snorkeling Adventures', 'Spice Education', 'Efficient Comprehensive Introduction'],
     rating: 4.6,
@@ -3255,7 +3463,13 @@ export const toursData: Tour[] = [
     price: 420,
     duration: '2 days/1 night',
     difficulty: 'Easy',
-    image: '/images/zanzibar-weekend.jpg',
+    image: '/images/tours/zanzibar/weekend/main.avif',
+    images: {
+      main: '/images/tours/zanzibar/weekend/main.avif',
+      mobile: '/images/tours/zanzibar/weekend/main.avif',
+      thumbnail: '/images/tours/zanzibar/weekend/main.avif',
+      alt: 'Weekend beach getaway to Zanzibar focusing on relaxation and marine experiences'
+    },
     location: 'Zanzibar',
     highlights: ['Perfect Quick Beach Escape', 'Essential Marine Experience', 'Relaxation Focus', 'Stress-Free Itinerary', 'Beautiful Beaches'],
     rating: 4.5,
@@ -3310,7 +3524,13 @@ export const toursData: Tour[] = [
     price: 180,
     duration: '1 day',
     difficulty: 'Easy',
-    image: '/images/zanzibar-day-trip.jpg',
+    image: '/images/tours/zanzibar/day-trip/main.jpeg',
+    images: {
+      main: '/images/tours/zanzibar/day-trip/main.jpeg',
+      mobile: '/images/tours/zanzibar/day-trip/main.jpeg',
+      thumbnail: '/images/tours/zanzibar/day-trip/main.jpeg',
+      alt: 'Zanzibar day trip covering Stone Town culture and spice plantation experience'
+    },
     location: 'Zanzibar',
     highlights: ['Maximum Experience Minimum Time', 'Flexible Options', 'Essential Zanzibar Taste', 'Efficient Touring', 'Perfect for Cruise Passengers'],
     rating: 4.4,
@@ -3359,7 +3579,13 @@ export const toursData: Tour[] = [
     price: 3850,
     duration: '7 days/6 nights',
     difficulty: 'Easy',
-    image: '/images/zanzibar-luxury.jpg',
+    image: '/images/tours/zanzibar/luxury/main.jpg',
+    images: {
+      main: '/images/tours/zanzibar/luxury/main.jpg',
+      mobile: '/images/tours/zanzibar/luxury/main.jpg',
+      thumbnail: '/images/tours/zanzibar/luxury/main.jpg',
+      alt: 'Ultimate luxury Zanzibar escape with private island accommodation and exclusive experiences'
+    },
     location: 'Zanzibar',
     highlights: ['Ultimate Exclusivity', 'Private Island Paradise', 'World-Class Diving', 'Personalized Service', 'Gourmet Dining', 'Complete Luxury', 'Absolute Privacy'],
     rating: 5.0,
@@ -3461,7 +3687,13 @@ export const toursData: Tour[] = [
     couplePrice: 1850,
     duration: '6 days/5 nights',
     difficulty: 'Easy',
-    image: '/images/zanzibar-honeymoon.jpg',
+    image: '/images/tours/zanzibar/honeymoon/main.jpg',
+    images: {
+      main: '/images/tours/zanzibar/honeymoon/main.jpg',
+      mobile: '/images/tours/zanzibar/honeymoon/main.jpg',
+      thumbnail: '/images/tours/zanzibar/honeymoon/main.jpg',
+      alt: 'Romantic Zanzibar honeymoon experience with couple-focused activities and luxury beachfront accommodation'
+    },
     location: 'Zanzibar',
     highlights: ['Designed for Connection', 'Private Intimate Experiences', 'No Distractions', 'Couples Activities', 'Romantic Settings', 'Perfect Honeymoon or Anniversary'],
     rating: 4.9,
@@ -3554,7 +3786,13 @@ export const toursData: Tour[] = [
     couplePrice: 1180,
     duration: '4 days/3 nights',
     difficulty: 'Easy',
-    image: '/images/zanzibar-lovers.jpg',
+    image: '/images/tours/zanzibar/lovers/main.jpeg',
+    images: {
+      main: '/images/tours/zanzibar/lovers/main.jpeg',
+      mobile: '/images/tours/zanzibar/lovers/main.jpeg',
+      thumbnail: '/images/tours/zanzibar/lovers/main.jpeg',
+      alt: 'Intimate romantic Zanzibar escape with adult-focused atmosphere and couple activities'
+    },
     location: 'Zanzibar',
     highlights: ['Intimate Atmosphere', 'Adult-Focused', 'Couples Activities', 'Flexible Romance', 'Beach Paradise', 'Quality Time Together'],
     rating: 4.8,

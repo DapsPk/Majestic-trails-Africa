@@ -27,19 +27,22 @@ export default function SafariPage() {
     '/images/safari/header-4.jpg'
   ];
 
-  // Category images arrays (2 images per category)
+  // Category images arrays with your 3 images per card
   const categoryImages = {
     serengeti: [
-      '/images/safari/serengeti/category-1.jpg',
-      '/images/safari/serengeti/category-2.jpg'
+      '/images/safari/cards/serengeti-card/main-1.jpeg',
+      '/images/safari/cards/serengeti-card/main-2.jpeg',
+      '/images/safari/cards/serengeti-card/main-3.jpeg'
     ],
     ngorongoro: [
-      '/images/safari/ngorongoro/category-1.jpg',
-      '/images/safari/ngorongoro/category-2.jpg'
+      '/images/safari/cards/ngorongoro-card/main-1.jpeg',
+      '/images/safari/cards/ngorongoro-card/main-2.jpeg',
+      '/images/safari/cards/ngorongoro-card/main-3.jpeg'
     ],
     tarangire: [
-      '/images/safari/tarangire/category-1.jpg',
-      '/images/safari/tarangire/category-2.jpg'
+      '/images/safari/cards/tarangire-card/main-1.jpeg',
+      '/images/safari/cards/tarangire-card/main-2.jpeg',
+      '/images/safari/cards/tarangire-card/main-3.jpeg'
     ]
   };
 
@@ -54,13 +57,13 @@ export default function SafariPage() {
     return () => clearInterval(interval);
   }, [safariImages.length]);
 
-  // Rotate category images every 4 seconds
+  // Rotate category images every 4 seconds (now with 3 images)
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentCategoryImages(prev => ({
-        serengeti: prev.serengeti === 0 ? 1 : 0,
-        ngorongoro: prev.ngorongoro === 0 ? 1 : 0,
-        tarangire: prev.tarangire === 0 ? 1 : 0
+        serengeti: (prev.serengeti + 1) % 3,
+        ngorongoro: (prev.ngorongoro + 1) % 3,
+        tarangire: (prev.tarangire + 1) % 3
       }));
     }, 4000);
 
@@ -85,12 +88,12 @@ export default function SafariPage() {
   const ngorongoroCount = safariTours.filter(tour => tour.subCategory === 'ngorongoro').length;
   const tarangireCount = safariTours.filter(tour => tour.subCategory === 'tarangire').length;
 
+  // Safari categories without emojis
   const safariCategories = [
     {
       id: 'serengeti',
       name: 'Serengeti National Park',
       description: 'Witness the Great Migration across endless golden plains. Experience Africa\'s greatest wildlife drama unfold.',
-      emoji: '🦁',
       count: serengetiCount,
       textColor: 'text-white',
       bgColor: 'bg-black bg-opacity-40',
@@ -101,7 +104,6 @@ export default function SafariPage() {
       id: 'ngorongoro',
       name: 'Ngorongoro Crater',
       description: 'Descend into the world\'s largest intact volcanic caldera. Unparalleled wildlife density and breathtaking scenery.',
-      emoji: '🦏',
       count: ngorongoroCount,
       textColor: 'text-white',
       bgColor: 'bg-black bg-opacity-40',
@@ -112,7 +114,6 @@ export default function SafariPage() {
       id: 'tarangire',
       name: 'Tarangire National Park',
       description: 'Discover the land of giants with massive elephant herds and ancient baobab trees dotting the landscape.',
-      emoji: '🐘',
       count: tarangireCount,
       textColor: 'text-white',
       bgColor: 'bg-black bg-opacity-40',
@@ -123,7 +124,7 @@ export default function SafariPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-blue-50">
-      {/* Safari Hero Section - OPTIMIZED HEIGHT */}
+      {/* Safari Hero Section */}
       <section className="relative min-h-[90vh] text-white overflow-hidden">
         {/* Background Images with Smooth Transition */}
         <div className="absolute inset-0">
@@ -146,7 +147,6 @@ export default function SafariPage() {
         {/* Content Container */}
         <div className="container mx-auto px-4 relative z-10 h-full flex items-center justify-center">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Clean Header - No Lion Icon */}
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-yellow-100 bg-clip-text text-transparent">
               Tanzania Safaris
             </h1>
@@ -242,21 +242,36 @@ export default function SafariPage() {
               </div>
             </div>
 
-            {/* Visual - REPLACED WITH IMAGE */}
+            {/* UPDATED: Tanzania's Wild Heart section with your image and text above */}
             <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl">
+              {/* Background Image - YOUR IMAGE */}
               <div 
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
                   backgroundImage: `url(/images/safari/tanzania-wild-heart.jpg)`
                 }}
               />
-              <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-              <div className="relative h-full flex items-center justify-end pr-8">
-                <div className="text-white text-right max-w-xs">
-                  <h3 className="text-3xl font-bold mb-2">Tanzania's Wild Heart</h3>
-                  <p className="text-lg opacity-90">Where Adventure Comes Alive</p>
+              
+              {/* Dark overlay for better text readability */}
+              <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+              
+              {/* Text overlay - positioned to appear ABOVE the image */}
+              <div className="absolute inset-0 flex items-center justify-end pr-8 z-10">
+                <div className="text-white text-right max-w-md">
+                  <h3 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+                    Tanzania's Wild Heart
+                  </h3>
+                  <p className="text-xl md:text-2xl opacity-90 drop-shadow-md">
+                    Where Adventure Comes Alive
+                  </p>
+                  <div className="mt-6 flex justify-end">
+                    <span className="inline-block w-20 h-1 bg-amber-400 rounded-full"></span>
+                  </div>
                 </div>
               </div>
+              
+              {/* Subtle gradient overlay for depth */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
             </div>
           </div>
         </div>
@@ -304,13 +319,13 @@ export default function SafariPage() {
                     <div className="absolute inset-0 bg-black bg-opacity-40"></div>
                   </div>
 
-                  {/* All Content Overlay */}
+                  {/* Content Overlay */}
                   <div className="relative p-6 text-white h-full flex flex-col justify-between z-10">
                     
-                    {/* Top Section - Category Header */}
+                    {/* Top Section */}
                     <div>
                       <div className="flex items-center justify-between mb-4">
-                        <div className="text-4xl">{category.emoji}</div>
+                        <div className="text-4xl opacity-0">-</div>
                         <div className="bg-white bg-opacity-20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold">
                           {category.count} {category.count === 1 ? 'tour' : 'tours'}
                         </div>
@@ -321,7 +336,7 @@ export default function SafariPage() {
                       </p>
                     </div>
 
-                    {/* Middle Section - Highlights */}
+                    {/* Highlights */}
                     <div className="mb-6">
                       <h4 className="font-semibold text-white mb-3 text-lg">Experience Highlights:</h4>
                       <div className="flex flex-wrap gap-2">
@@ -336,7 +351,7 @@ export default function SafariPage() {
                       </div>
                     </div>
 
-                    {/* Bottom Section - CTA Button */}
+                    {/* CTA Button */}
                     <div className="mt-auto">
                       <div className={`w-full border-2 border-white text-white py-3 px-6 rounded-xl text-center font-semibold transition-all duration-200 bg-white bg-opacity-10 backdrop-blur-sm hover:bg-white hover:bg-opacity-20 group-hover:shadow-lg`}>
                         Explore {category.name.split(' ')[0]} Safaris →
@@ -356,7 +371,6 @@ export default function SafariPage() {
                 Each park offers a unique experience. Serengeti for the Great Migration, Ngorongoro for crater wildlife density, 
                 and Tarangire for elephant herds and baobab landscapes. Our experts can help you choose the perfect safari.
               </p>
-              {/* Transparent Button */}
               <button className="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105">
                 🦁 Contact Our Safari Experts
               </button>
